@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Cafe Cashier Management</title>
+  </head>
+  <body>
+    <div class="header-container">
+      <p class="logo">Cafet'.io</p>
+      <a href="add-product.html"><button class="edit-store">Edit Menus</button></a>
+    </div>
+
+
+
+  <div class="main-body-container">
+    <div class="food-container">
+      <div class="search-bar-container">
+        <form class="form-search-bar">
+          <input class="js-search-bar search-bar" placeholder="Looking for...">
+          <button class="js-search-button search-button">Search</button>
+        </form>
+      </div>
+  
+      <div class="category-container">
+        <button class="js-snack-button snack-button">Snacks</button>
+        <button class="js-snack-button snack-button">Snacks</button>
+        <button class="js-snack-button snack-button">Snacks</button>
+        <button class="js-snack-button snack-button">Snacks</button>
+        <button class="js-snack-button snack-button">Snacks</button>
+      </div>
+      
+      <div class="food-choices-container">
+        <div class="food-card-container">
+
+          <div class="food-card-interior">
+            <img src="Images/burger.jpg" class="food-image">
+            <p class="js-food-name">Burger</p>
+            <p class="js-food-price">1.89</p>
+            <div class="add-button-container">
+              <button class="js-add-button">Add</button>
+            </div>
+          </div>
+
+          <div class="food-card-interior">
+            <img src="Images/iced choco.jpg" class="food-image">
+            <p class="js-food-name">Iced Choco</p>
+            <p class="js-food-price">1.89</p>
+            <div class="add-button-container">
+              <button class="js-add-button">Add</button>
+            </div>
+          </div>
+
+          <div class="food-card-interior">
+            <img src="Images/iced coffee.jpg" class="food-image">
+            <p class="js-food-name">Iced Coffee</p>
+            <p class="js-food-price">1.89</p>
+            <div class="add-button-container">
+              <button class="js-add-button">Add</button>
+            </div>
+          </div>
+
+          <div class="food-card-interior">
+            <img src="Images/siomai.jpg" class="food-image">
+            <p class="js-food-name">Siomai Rice</p>
+            <p class="js-food-price">1.89</p>
+            <div class="add-button-container">
+              <button class="js-add-button">Add</button>
+            </div>
+          </div>
+
+          <div class="food-card-interior">
+            <img src="Images/fries.jpg" class="food-image">
+            <p class="js-food-name">Fries</p>
+            <p class="js-food-price">1.89</p>
+            <div class="add-button-container">
+              <button class="js-add-button">Add</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="cashier-container">
+      <h1>My Orders:</h1>
+
+      <div class="order-container">
+
+        <div class="food-order-container">
+          <div class="food-order-container-interior">
+            <p class="js-food-name">burger</p>
+            <div class="food-quantifier">
+              <i class="fa-solid fa-circle-minus"></i>
+              <input class="js-counter">
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <p class="js-food-price">1.89</p>
+          </div>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <div class="food-order-container">
+          <div class="food-order-container-interior">
+            <p class="js-food-name">burger</p>
+            <div class="food-quantifier">
+              <i class="fa-solid fa-circle-minus"></i>
+              <input class="js-counter">
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <p class="js-food-price">1.89</p>
+          </div>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <div class="food-order-container">
+          <div class="food-order-container-interior">
+            <p class="js-food-name">burger</p>
+            <div class="food-quantifier">
+              <i class="fa-solid fa-circle-minus"></i>
+              <input class="js-counter">
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <p class="js-food-price">$1.89</p>
+          </div>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+        
+        <div class="food-order-container">
+          <div class="food-order-container-interior">
+            <p class="js-food-name">burger</p>
+            <div class="food-quantifier">
+              <i class="fa-solid fa-circle-minus"></i>
+              <input class="js-counter">
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <p class="js-food-price">$1.89</p>
+          </div>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <div class="food-order-container">
+          <div class="food-order-container-interior">
+            <p class="js-food-name">burger</p>
+            <div class="food-quantifier">
+              <i class="fa-solid fa-circle-minus"></i>
+              <input class="js-counter">
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <p class="js-food-price">$1.89</p>
+          </div>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <div class="food-order-container">
+          <div class="food-order-container-interior">
+            <p class="js-food-name">burger</p>
+            <div class="food-quantifier">
+              <i class="fa-solid fa-circle-minus"></i>
+              <input class="js-counter">
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <p class="js-food-price">$1.89</p>
+          </div>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <div class="food-order-container">
+          <div class="food-order-container-interior">
+            <p class="js-food-name">burger</p>
+            <div class="food-quantifier">
+              <i class="fa-solid fa-circle-minus"></i>
+              <input class="js-counter">
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <p class="js-food-price">$1.89</p>
+          </div>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <div class="food-order-container">
+          <div class="food-order-container-interior">
+            <p class="js-food-name">burger</p>
+            <div class="food-quantifier">
+              <i class="fa-solid fa-circle-minus"></i>
+              <input class="js-counter">
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <p class="js-food-price">$1.89</p>
+          </div>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <div class="food-order-container">
+          <div class="food-order-container-interior">
+            <p class="js-food-name">burger</p>
+            <div class="food-quantifier">
+              <i class="fa-solid fa-circle-minus"></i>
+              <input class="js-counter">
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <p class="js-food-price">$1.89</p>
+          </div>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+      </div>
+      <h4 class="total-cost">Total cost: $6.45</h4>
+      <div class="submit-button-container">
+        <button class="submit-button">Submit Order</button>
+      </div>
+    </div>
+  </div>
+  </body>
+
+
+</html>

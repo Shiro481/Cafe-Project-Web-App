@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="add-product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Add a product</title>
+  </head>
+  <body>
+    <div class="header-container">
+      <p class="logo">Cafet'.io</p>
+    </div>
+
+    <a href="index.html">
+      <h3 class="back-page"><i class="fa-solid fa-chevron-left"></i>Back</h3>
+    </a>
+
+    <div class="add-product-main-container">
+
+      <div class="add-product-container">
+        <h2>Add Product</h2>
+        <form class="product-form">
+          <label>Category:</label>
+          <input class="js-product-category product-category">
+
+          <label>Name:</label>
+          <input class="js-product-name product-name">
+
+          <label>Price:</label>
+          <input class="js-product-price product-price">
+
+          <button class="product-photo">Add a photo</button>
+        </form>
+
+        <div class="save-button-container">
+          <button class="save-button" onclick="
+              getProduct();
+            ">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+
+  </body>
+</html>
