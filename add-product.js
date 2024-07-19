@@ -12,17 +12,25 @@ function handleSavedProduct(){
   }
 
   products.push(foodDetails);
-  displayProductList();
-
+  
   document.querySelector('.js-product-category').value = '';
   document.querySelector('.js-product-name').value = '';
   document.querySelector('.js-product-price').value = '';
 }
 
+let productHTML = '';
+products.forEach((product) => {
 
-function displayProductList(){
+  productHTML += `
+    <div class="food-card-interior">
+        <img src="Images/burger.jpg" class="food-image">
+        <p class="js-food-name">${product.name}</p>
+        <p class="js-food-price">$${product.price}</p>
+        <div class="add-button-container">
+          <button class="js-add-button">Add</button>
+        </div>
+      </div>
+  `;
+});
 
-  for(let i = 0; i < products.length; i++){
-    console.log(products[i]);
-  }
-}
+document.querySelector('.js-food-card-container').innerHTML = productHTML;
