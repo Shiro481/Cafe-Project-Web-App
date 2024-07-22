@@ -1,21 +1,29 @@
 let products = [];
 
+
 function handleSavedProduct(){
+  let foodImage = document.querySelector('.')
   let foodCategory = document.querySelector('.js-product-category').value;
   let foodName =document.querySelector('.js-product-name').value;
   let foodPrice = parseFloat(document.querySelector('.js-product-price').value);
 
   const foodDetails = {
+    image: foodImage,
     category: foodCategory,
     name: foodName,
     price:foodPrice
   }
 
   products.push(foodDetails);
+
+
+
   
   document.querySelector('.js-product-category').value = '';
   document.querySelector('.js-product-name').value = '';
   document.querySelector('.js-product-price').value = '';
+
+
 }
 
 let productHTML = '';
