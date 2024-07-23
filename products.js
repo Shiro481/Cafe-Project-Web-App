@@ -1,5 +1,4 @@
 
-
 export let products = [{
   image: 'Images/burger.jpg',
   category: 'Snacks',
@@ -30,3 +29,5 @@ export let products = [{
   name: 'Siomai  w/ Rice',
   price: 1.89
 }];
+
+
