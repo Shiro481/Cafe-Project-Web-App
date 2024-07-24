@@ -28,6 +28,26 @@ export let products = [{
   category:'Meals',
   name: 'Siomai  w/ Rice',
   price: 1.89
-}];
+},
+{
+  image: 'Images/Strawberry Cheesecake.jpg',
+  category: 'Deserts',
+  name: 'Strawberry Cheesecake',
+  price: 2.89
+},
+{
+  image: 'Images/Chocolate Cake.jpg',
+  category: 'Deserts',
+  name: 'Chocolate Cake',
+  price: 4.89
+},
+{
+  image: 'Images/Adobo.jpg',
+  category: 'Meals',
+  name: 'Adobo',
+  price: 3.89
+}
+
+];
 
 

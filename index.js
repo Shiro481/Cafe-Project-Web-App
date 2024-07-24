@@ -1,6 +1,6 @@
 import { products } from "./products.js";
-import { orders } from "./orders.js";
 
+let orders = [];
 let snacksCategory = [];
 let drinksCategory = [];
 let mealsCategory = [];
@@ -60,12 +60,14 @@ function addButton() {
           quantity: 1
         });
       }
-      displayOrder();  // Update the displayed order
+      displayOrder();
+        // Update the displayed order
     });
   });
 }
 
 function displayOrder() {
+  let itemQuantity = 0;
   let ordersHTML = '';
   let orderContainer = document.querySelector('.js-order-container');
 
@@ -73,20 +75,20 @@ function displayOrder() {
     ordersHTML += `
       <div class="food-order-container">
         <div class="food-order-container-interior">
-          <p class="js-food-name">${item.productName}</p>
+          <p class="js-food-order-name">${item.productName}</p>
           <div class="food-quantifier">
             <i class="fa-solid fa-circle-minus"></i>
             <p class="js-counter">${item.quantity}</p>
             <i class="fa-solid fa-circle-plus"></i>
           </div>
-          <p class="js-food-price">$${item.productPrice}</p>
+          <p class="js-food-order-price">$${item.productPrice}</p>
         </div>
         <i class="fa-solid fa-circle-xmark"></i>
       </div>
     `;
   });
-
   orderContainer.innerHTML = ordersHTML;
+  countItems(itemQuantity);
 }
 
 function displayCategory(category) {
@@ -115,3 +117,20 @@ document.querySelector('.js-deserts-button').addEventListener('click', () => dis
 
 // Initialize display
 displayAll(products);
+
+/*function addToOrderQuantity(){
+  document.querySelectorAll('.fa-circle-plus').forEach((item)=>{
+    item.addEventListener('click', ()=>{
+    let productName = item.product
+    });
+  })
+}*/
+
+function countItems(itemQuantity,){
+  orders.forEach((item) =>{
+    itemQuantity += item.quantity;
+  });
+  
+  document.querySelector('.js-items').innerHTML = `items: ${itemQuantity}`;
+}
+
