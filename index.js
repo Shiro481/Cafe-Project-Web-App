@@ -64,7 +64,6 @@ function addButton() {
       }
 
       displayOrder();
-      console.log(orders);
         // Update the displayed orde
     });
   });
@@ -77,7 +76,7 @@ function displayOrder() {
   let orderContainer = document.querySelector('.js-order-container');
 
   orders.forEach((item) => {
-    let totalItemPrice = (item.productPrice * item.quantity).toFixed(2);
+    let totalItemPrice = ((item.productPrice * item.quantity*100)/100).toFixed(2);
     ordersHTML += `
       <div class="food-order-container">
         <div class="food-order-container-interior">
@@ -99,8 +98,7 @@ function displayOrder() {
   countItems(ordersQuantity);
   addQuantity();
   minusQuantity();
-  removeOrder();
-  
+  removeOrder();  
 
 }
 
@@ -159,7 +157,6 @@ function minusQuantity(){
       if (targetItem){
         if (targetItem.quantity  > 1){
           targetItem.quantity-=1;
-          console.log(orders);
           displayOrder();
           
           
@@ -192,18 +189,31 @@ function displayTotalCost(){
   document.querySelector('.js-total-cost').innerHTML = `Total Cost: $${totalCost.toFixed(2)}`;
 }
 
+function filterOrder(productName){
+  orders = orders.filter(item => item.productName !== productName);
+  displayOrder();
+
+
+}
+
+document.querySelector('.js-submit-button').addEventListener('click',()=>{
+
+  if(orders.length === 0){
+    alert('Error: No orders found');
+  }else{
+    alert('Order successfully submitted');
+    orders.length = 0;
+    displayOrder();
+  }
+})
+
 function removeOrder(){
   document.querySelectorAll('.js-remove-button').forEach((removeButton)=>{
-    removeButton.addEventListener('click', ()=>{
+    removeButton.addEventListener('click', ()=> {
       let productName = removeButton.dataset.orderName;
-      let targetOrder = orders.find(order => order.productName === productName);
 
-      if(targetOrder){
-       console.log('hello');
-      }
+      filterOrder(productName)
     })
 
   })
 }
-
-

@@ -189,7 +189,7 @@ body{
 }
 
 .order-container{
-  width:370px;
+  width:450px;
   height:480px;
   overflow: hidden;
   overflow-y: scroll;
@@ -217,12 +217,14 @@ body{
   display:flex;
   align-items: center;
   margin-bottom:15px;
+  width:420px;
+ 
 
 }
 
 .food-order-container-interior{
   display:flex;
-  width:290px;
+  width:350px;
   height:67px;
   border-radius:17px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -241,23 +243,19 @@ body{
 }
 
 .js-counter{
-  width:30px;
-  height:25px;
   border:none;
-  border-radius:20px;
-  background-color: #D9D9D9;
-  padding-left: 12px;
+ 
 }
 
 .js-food-order-name{
-  margin-left:10px;
+  margin-left:25px;
   font-size:16px;
   width: 150px;
 
 }
 
 .fa-circle-xmark{
-  margin-left:20px;
+
   font-size:24px;
 }
 
@@ -269,6 +267,7 @@ body{
 .total-cost{
   margin-top:50px;
   margin-left:50px;
+  font-size: 34px;
 }
 
 .submit-button-container{
@@ -294,9 +293,18 @@ body{
 .add-quantity{
   background: none;
   border:none;
+  cursor: pointer;
 }
 
 .minus-quantity{
   background: none;
   border:none;
+  cursor: pointer;
 }
+.js-remove-button{
+  background: none;
+  border:none;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
