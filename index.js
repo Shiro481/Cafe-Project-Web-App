@@ -53,6 +53,8 @@ function addButton() {
 
       if (sameProduct) {
         sameProduct.quantity++;
+
+
       } else {
         orders.push({
           productName: productName,
@@ -60,35 +62,46 @@ function addButton() {
           quantity: 1
         });
       }
+
       displayOrder();
-        // Update the displayed order
+      console.log(orders);
+        // Update the displayed orde
     });
   });
+
 }
 
 function displayOrder() {
-  let itemQuantity = 0;
+  let ordersQuantity = 0;
   let ordersHTML = '';
   let orderContainer = document.querySelector('.js-order-container');
 
   orders.forEach((item) => {
+    let totalItemPrice = (item.productPrice * item.quantity).toFixed(2);
     ordersHTML += `
       <div class="food-order-container">
         <div class="food-order-container-interior">
           <p class="js-food-order-name">${item.productName}</p>
           <div class="food-quantifier">
-            <i class="fa-solid fa-circle-minus"></i>
+            <button class="minus-quantity js-minus-quantity" data-order-name="${item.productName}"><i class="fa-solid fa-circle-minus"></i></button>
             <p class="js-counter">${item.quantity}</p>
-            <i class="fa-solid fa-circle-plus"></i>
+            <button class="add-quantity js-add-quantity" data-order-name="${item.productName}"><i class="fa-solid fa-circle-plus" ></i></button>
           </div>
-          <p class="js-food-order-price">$${item.productPrice}</p>
+          <p class="js-food-order-price">$${totalItemPrice}</p>
         </div>
-        <i class="fa-solid fa-circle-xmark"></i>
+        <button class="js-remove-button" data-order-name="${item.productName}"><i class="fa-solid fa-circle-xmark" ></i></button>
       </div>
     `;
+    
   });
   orderContainer.innerHTML = ordersHTML;
-  countItems(itemQuantity);
+  displayTotalCost();
+  countItems(ordersQuantity);
+  addQuantity();
+  minusQuantity();
+  removeOrder();
+  
+
 }
 
 function displayCategory(category) {
@@ -118,13 +131,45 @@ document.querySelector('.js-deserts-button').addEventListener('click', () => dis
 // Initialize display
 displayAll(products);
 
-/*function addToOrderQuantity(){
-  document.querySelectorAll('.fa-circle-plus').forEach((item)=>{
-    item.addEventListener('click', ()=>{
-    let productName = item.product
-    });
-  })
-}*/
+function addQuantity(){
+  document.querySelectorAll('.js-add-quantity').forEach((item)=>{
+    item.addEventListener('click' , ()=>{
+      let productName = item.dataset.orderName;
+      let targetItem = orders.find(product => product.productName === productName);
+
+      if (targetItem){
+
+        targetItem.quantity++;
+        console.log(orders);
+        displayOrder();
+       
+      };
+     
+    })
+  });
+
+}
+
+function minusQuantity(){
+  document.querySelectorAll('.js-minus-quantity').forEach((item)=>{
+    item.addEventListener('click' , ()=>{
+      let productName = item.dataset.orderName;
+      let targetItem = orders.find(order => order.productName === productName);
+    
+      if (targetItem){
+        if (targetItem.quantity  > 1){
+          targetItem.quantity-=1;
+          console.log(orders);
+          displayOrder();
+          
+          
+          };
+      };
+    })
+ 
+  });
+}
+  
 
 function countItems(itemQuantity,){
   orders.forEach((item) =>{
@@ -133,4 +178,32 @@ function countItems(itemQuantity,){
   
   document.querySelector('.js-items').innerHTML = `items: ${itemQuantity}`;
 }
+
+
+function displayTotalCost(){
+  let totalCost = 0;
+
+  orders.forEach((item)=>{
+    totalCost += item.quantity * item.productPrice;
+
+    return totalCost.toFixed(2);
+  });
+
+  document.querySelector('.js-total-cost').innerHTML = `Total Cost: $${totalCost.toFixed(2)}`;
+}
+
+function removeOrder(){
+  document.querySelectorAll('.js-remove-button').forEach((removeButton)=>{
+    removeButton.addEventListener('click', ()=>{
+      let productName = removeButton.dataset.orderName;
+      let targetOrder = orders.find(order => order.productName === productName);
+
+      if(targetOrder){
+       console.log('hello');
+      }
+    })
+
+  })
+}
+
 

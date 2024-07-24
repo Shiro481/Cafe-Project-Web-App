@@ -290,3 +290,13 @@ body{
   margin-top:40px;
   cursor: pointer;
 }
+
+.add-quantity{
+  background: none;
+  border:none;
+}
+
+.minus-quantity{
+  background: none;
+  border:none;
+}
