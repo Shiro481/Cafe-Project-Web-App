@@ -132,6 +132,7 @@ body{
   width:139px;
   height:52px;
   border:none;
+  color:black;
   font-weight:600;
   border-radius:35px;
   background-color: white;
@@ -255,7 +256,7 @@ body{
 }
 
 .fa-circle-xmark{
-
+  color: black;
   font-size:24px;
 }
 
@@ -293,12 +294,14 @@ body{
 .add-quantity{
   background: none;
   border:none;
+  color:black;
   cursor: pointer;
 }
 
 .minus-quantity{
   background: none;
   border:none;
+  color:black;
   cursor: pointer;
 }
 .js-remove-button{
