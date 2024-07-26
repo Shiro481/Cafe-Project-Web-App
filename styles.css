@@ -446,9 +446,24 @@ body{
 }
 
 .form-search-bar{
-  margin:0;
+  margin-left:0;
+
+
 }
 
+.header-container{
+  height:73px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  margin-left:0;
+  font-size: 25px;
+  font-weight: 700;
+}
 
 
 }
