@@ -527,18 +527,20 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
+    margin-top:30px;
   }
 
 .food-card-container{
   display:grid;
-  grid-template-columns: 125px 1fr ;
+  grid-template-rows: 1fr 1fr ;
   grid-auto-flow: column dense;
-  width:407px;
+  width:450px;
   gap: 1rem;
-  height:340px;
+  height:400px;
   overflow: hidden;
   overflow-x: scroll;
-  margin-top:20px;
+  margin-top: 25px;
+  margin-left:35px;
 }
 .food-card-interior{
   width:125px;
@@ -578,6 +580,16 @@ body{
   justify-content: center;
   align-items: center;
   margin-top: 12.5px;
+}
+
+.cashier-container{
+  margin-top:20px;
+  width:100%;
+  height:100%;
+  border: none;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
